@@ -142,6 +142,10 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx-default.conf /etc/nginx/conf.d/default.conf
 
+# Link php
+RUN set -x \
+	&& ln -s /usr/bin/php7 /usr/bin/php
+
 # Reset Password and group files
 RUN set -x \
       && echo "root:x:0:0:root:/root:/bin/ash" > /etc/passwd \
