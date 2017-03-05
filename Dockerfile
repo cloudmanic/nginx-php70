@@ -169,7 +169,7 @@ COPY php-fpm-www.conf /etc/php7/php-fpm.d/www.conf
 
 # Copy the file that gets called when we start
 COPY start.sh /start.sh
-RUN chmod 700 /start.sh && chown www-data:www-data /start.sh
+RUN chmod 755 /start.sh && chown www-data:www-data /start.sh
 
 # Set port we run on because we run as a user.
 EXPOSE 8080
