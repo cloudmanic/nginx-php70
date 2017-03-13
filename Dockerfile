@@ -11,7 +11,7 @@ ENV NGINX_VERSION 1.11.10
 RUN apk add --no-cache openssh-client git tar php7-fpm curl bash vim
 
 # Essential php magic
-RUN apk add --no-cache php7-curl php7-dom php7-gd php7-ctype php7-zip php7-xml php7-iconv php7-sqlite3 php7-mysqli php7-pgsql php7-pdo_pgsql php7-json php7-phar php7-openssl php7-pdo php7-mcrypt php7-pdo php7-pdo_pgsql php7-pdo_mysql php7-opcache php7-zlib php7-mbstring php7-session php7-intl php7-gettext
+RUN apk add --no-cache php7-curl php7-dom php7-gd php7-ctype php7-zip php7-xml php7-iconv php7-sqlite3 php7-mysqli php7-pgsql php7-pdo_pgsql php7-json php7-phar php7-openssl php7-pdo php7-mcrypt php7-pdo php7-pdo_pgsql php7-pdo_mysql php7-opcache php7-zlib php7-mbstring php7-session php7-intl php7-gettext php7-pcntl
 
 # Composer
 RUN curl --silent --show-error --fail --location \
